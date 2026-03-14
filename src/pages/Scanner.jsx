@@ -16,6 +16,8 @@ const REPORT_SITES = [
   { name: 'National Consumer Helpline', url: 'https://consumerhelpline.gov.in/', icon: '📞' },
 ];
 
+const API_BASE = import.meta.env.VITE_API_URL || '';
+
 export default function Scanner() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('scan'); // 'scan', 'history', 'report'
@@ -86,7 +88,7 @@ export default function Scanner() {
         const fullDataUrl = ev.target.result;
         
         try {
-          const response = await fetch('/api/scan-document', {
+          const response = await fetch(`${API_BASE}/api/scan-document`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

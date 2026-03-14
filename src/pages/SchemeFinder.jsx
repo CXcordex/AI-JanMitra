@@ -13,6 +13,8 @@ const FILTERS = {
 
 const FILTER_CHIPS = ['All', 'Housing', 'Health', 'Agriculture', 'Finance', 'Education'];
 
+const API_BASE = import.meta.env.VITE_API_URL || '';
+
 export default function SchemeFinder() {
   const [selectedFilters, setSelectedFilters] = useState({
     state: 'Bihar',
@@ -48,7 +50,7 @@ export default function SchemeFinder() {
     setHasSearched(true);
 
     try {
-      const response = await fetch('/api/schemes/search', {
+      const response = await fetch(`${API_BASE}/api/schemes/search`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(selectedFilters)

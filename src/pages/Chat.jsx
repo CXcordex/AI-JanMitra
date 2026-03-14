@@ -21,6 +21,8 @@ const LANGUAGES = [
   { code: 'bn', label: 'বাংলা' },
 ];
 
+const API_BASE = import.meta.env.VITE_API_URL || '';
+
 export default function Chat() {
   const [messages, setMessages] = useState([
     {
@@ -137,7 +139,7 @@ export default function Chat() {
           reader.readAsDataURL(pendingImage);
         });
 
-        response = await fetch('/api/scan-document', {
+        response = await fetch(`${API_BASE}/api/scan-document`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -147,7 +149,7 @@ export default function Chat() {
           })
         });
       } else {
-        response = await fetch('/api/chat', {
+        response = await fetch(`${API_BASE}/api/chat`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
