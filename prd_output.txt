@@ -1,0 +1,45 @@
+AI JANMITRA - PRODUCT REQUIREMENTS DOCUMENT (PRD)
+
+1. PRODUCT VISION
+Free AI companion for 1.4B Indians: legal guidance, scheme discovery, scam protection - in 8 languages.
+
+2. TARGET USERS
+- Rural citizens (80% Hindi/Bengali)
+- Daily wage workers/farmers (need schemes)
+- Urban semi-literate (scam prone)
+- Platforms: Mobile (95%), PWA installable
+
+3. MVP FEATURES (Week 1)
+✓ AI Chat (voice/image/text/8lang)
+✓ Document Scanner (OCR + scam AI)
+✓ Scheme Finder (profile → 10 matches)
+✓ Mock data → Real APIs
+
+4. CORE USER FLOWS
+Flow 1: Scam Detection (60% usage)
+"Photo of electricity notice" → OCR → "94% scam - call 1930"
+
+Flow 2: Scheme Discovery (25%)
+"Bihar farmer, 35yo" → "PM Kisan (eligible), PMAY (check docs)"
+
+Flow 3: Legal Guidance (15%)
+"RTI kaise file" → Step-by-step + sample draft
+
+5. SUCCESS METRICS
+- Daily Active: 1000 chats/day
+- Conversion: 30% chat → scheme apply
+- Retention: Voice users return 3x more
+- NPS: 80+ (citizen trust critical)
+
+6. TECHNICAL REQUIREMENTS
+- Latency: <3s response (Render + Redis cache)
+- Offline: Cache last 10 chats
+- Privacy: Images deleted post-analysis (no storage)
+
+7. LAUNCH CHECKLIST
+[ ] Backend APIs live + auto-docs
+[ ] Supabase populated (500+ schemes)
+[ ] Frontend proxy configured
+[ ] Voice tested (Chrome/Android)
+[ ] Shareable results (WhatsApp)
+[ ] PWA manifest + install prompt

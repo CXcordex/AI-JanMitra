@@ -1,0 +1,3 @@
+1. System Architecture Overview
+AI JanMitra is built as a three-tier architecture: a Node.js/React client layer, a Python FastAPI orchestration and AI layer, and a Supabase PostgreSQL data layer. All AI reasoning is performed by models accessed via OpenRouter and HuggingFace APIs. Every component uses free-tier or open-source resources.
+[... full content from above ...]

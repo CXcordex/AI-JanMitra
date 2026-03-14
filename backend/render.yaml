@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ai-janmitra-backend
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn app.routers.api:router -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: SUPABASE_URL
+        value: "" # User needs to fill this in Render Dashboard
+      - key: SUPABASE_SERVICE_KEY
+        value: "" # User needs to fill this in Render Dashboard

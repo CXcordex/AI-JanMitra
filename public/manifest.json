@@ -1,0 +1,16 @@
+{
+  "name": "AI JanMitra - Citizen Assistant",
+  "short_name": "JanMitra",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#E8E4DC",
+  "theme_color": "#0D2240",
+  "description": "Free AI companion for legal guidance, scheme discovery, and scam protection.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
